@@ -64,6 +64,15 @@ class Quiz{
        System.out.println("Total Questions: "+hmap.size());
        System.out.println("you got "+correctAnsCount+" correct");
        System.out.println("and "+wrongAnsCount+" answers wrong");
-       System.out.println("Your score Percentage is: "+(correctAnsCount*100)/hmap.size()+"%");
+       int percentage = (100*correctAnsCount)/ hmap.size();
+       System.out.println("Your score Percentage is: "+percentage+"%");
+
+       if (percentage>95){
+           System.out.println("Performance: Very Good");
+       }else if (percentage<35){
+           System.out.println("Performance: Very Low");
+       }else {
+           System.out.println("Performance: Average");
+       }
    }
 }
